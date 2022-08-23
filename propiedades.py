@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 import os
 import linecache
 
@@ -18,7 +19,7 @@ time  = particular_line[1]
 step= float(particular_line.split()[0])
 time= float(particular_line.split()[1])
 
-datos = open('Energy', 'w')
+datos = open('Energy', 'r+')
 datos.write('Density')
 
 energy = 'gmx energy -f file.edr -b  ' + str(time/4) + ' < Energy'
